@@ -1,14 +1,18 @@
+
 import { Route, Routes } from 'react-router-dom';
+import LoginDashboard from './components/LoginDashboard';
 import './App.css';
-import UserProvider from './components/contexts/UserProvider';
+import UserProvider from './contexts/UserProvider';
 
 function App() {
   return (
     <div className="App">
-      <UserProvider>
-      <h1> Hello</h1>
-       <Routes>
-      </Routes>
+      <h1>Hello</h1>
+       <UserProvider>
+          <Routes>
+            <Route path ='/' element={<LoginDashboard/>} />
+          </Routes> 
+
         </UserProvider>
     </div>
   );
