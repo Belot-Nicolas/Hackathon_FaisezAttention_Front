@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
 import axios from 'axios';
 //j'appelle mon useContext
-import { useUser } from '../../contexts/UserProvider';
+import { useUser } from '../contexts/UserProvider';
 import './LoginDashboard.css'
 import SignIn from './SignIn';
 
@@ -95,19 +95,7 @@ const LoginDashboard = (props) => {
             <button className='submit-btn'  type='submit'>Envoyer</button>   
 
           </form>
-          <div id="container">
-            {LoginDashboard.map((login, index) => (
-              <SignIn
-                key={index}
-                firstname={login.firstname}
-                lastname={login.lastname}
-                password={login.password}
-                email={login.email}
-                avatar={login.avatar}
-              />
-
-            ))}
-          </div>
+        
         </div>
 
         
