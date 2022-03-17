@@ -1,24 +1,24 @@
-import React, { useState, useCallback, useEffect } from "react";
+import React from "react";
 import ImageMapper from "react-image-mapper";
 import risque1 from './pictures/risque1.png'
 
 
-export default function App() {
+function Gameone() {
   const [mapAreas, setMapAreas] = useState({
     name: "my-map",
     areas: [
-      { 
-        id: 1, 
-        shape: "circle", 
-        coords: [210, 157, 10], 
-        preFillColor: "blue" ,
+      {
+        id: 1,
+        shape: "circle",
+        coords: [210, 157, 10],
+        preFillColor: "blue",
         href: "https://tenor.com/view/beaker-electrocuted-ahhh-gif-9589484"
       },
       {
         id: 2,
         shape: "circle",
-        coords: [191, 297, 10], 
-        preFillColor: "red" ,
+        coords: [191, 297, 10],
+        preFillColor: "red",
         href: "https://youtube.com"
       },
       {
@@ -57,37 +57,6 @@ export default function App() {
     ]
   });
 
-  // const getTipPosition = area => {
-  //   const obj = { top: `${area.center[1]}px`, left: `${area.center[0]}px` };
-  //   console.log(obj);
-  // };
-
-  /*const handleUpdateMapArea = useCallback(
-    evt =>
-      updateMapArea(1, [evt.nativeEvent.layerX, evt.nativeEvent.layerY, 10]),
-    []
-  );*/
-
-  /**
-   * Update image area when updated
-   *
-   *
-   */
-  /*useEffect(() => {
-    setQuery(Math.random());
-  }, [mapAreas]);
-
-  /*const updateMapArea = (id, coords) => {
-    console.log(id, coords);
-    const areas = mapAreas.areas.map(item =>
-      item.id === id ? { ...item, coords } : item
-    );
-    setMapAreas({
-      name: mapAreas.name,
-      areas: mapAreas.areas 
-    });
-  };*/
-
   return (
     <div className="App">
       <h1>Hello CodeSandbox</h1>
@@ -103,7 +72,7 @@ export default function App() {
     </div>
   );
 }
-
+export default Gameone;
 
 
 
