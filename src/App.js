@@ -5,7 +5,8 @@ import Game from './pages/Game'
 import Gameone from '../src/pages/Gameone'
 import UserProvider from './contexts/UserProvider';
 import './App.css';
-import logoBlanc from './assets/logoBlanc.png';
+import Game from './pages/Game';
+// import logoBlanc from './assets/logoBlanc.png';
 
 function App() {
   return (
