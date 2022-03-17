@@ -2,7 +2,7 @@
 import { Route, Routes } from 'react-router-dom';
 import LoginDashboard from './components/LoginDashboard';
 import './App.css';
-import Gameone from './pages/Gameone'
+import Gameone from '../src/Gameone'
 import UserProvider from './contexts/UserProvider';
 
 function App() {
