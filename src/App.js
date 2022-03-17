@@ -4,18 +4,20 @@ import LoginDashboard from './components/LoginDashboard';
 import './App.css';
 import Gameone from '../src/pages/Gameone'
 import UserProvider from './contexts/UserProvider';
+import logoBlanc from './assets/logoBlanc.png';
 
 function App() {
   return (
     <div className="App">
-      <Gameone />
-      <h1>Hello</h1>
+      
+      <h1><img className='Title' src={logoBlanc}/></h1>
       <UserProvider>
         <Routes>
           <Route path='/' element={<LoginDashboard />} />
+        
+          <Route path='/Game' element={<Gameone/>} />
         </Routes>
       </UserProvider>
-
     </div>
   );
 }
