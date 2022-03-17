@@ -14,8 +14,6 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      {/* <h1><img className='Title' src={logoBlanc}/></h1> */}
-     
         <UserProvider>
           <Routes>
             <Route path ='/' element={<LoginDashboard/>} />
@@ -25,7 +23,7 @@ function App() {
             <Route path='/game/:email' element={<Game />} />
           </Routes> 
         </UserProvider>
-        
+
     </div>
   );
 }

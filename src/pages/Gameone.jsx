@@ -1,10 +1,24 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import ImageMapper from "react-image-mapper";
 import risque1 from '../assets/risque1.png';
+import Timer from "../components/Timer";
 import Circle from "./Circle";
 import './Gameone.css'
 
 function Gameone() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(!isVisible)
+      console.log("coucou")
+    }
+    ,60000
+    )
+  }
+  ,[]
+  ) 
+
   const [hoveredArea, setHoveredArea] = useState(null);
   const [mapAreas, setMapAreas] = useState({
     name: "my-map",
@@ -100,16 +114,18 @@ function Gameone() {
 
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      <h1 className="error_game">Jeu des 7 erreurs</h1>
       <div className='container'>
+      <Timer />
       <ImageMapper src={risque1} />
       </div> 
       <div className='Mirroir'>
         {array.map((item) => (
         <Circle key={item.id}item={item}/>
       ))}</div>
-      <pre>Click once, click twice, three times a click</pre>
+      <div className="the_end">
+      {isVisible && <div>Temps écoulé ! </div>}
+      </div>
     </div>
   );
 }
