@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import ImageMapper from "react-image-mapper";
-import risque1 from './pictures/risque1.png'
-
+import risque1 from '../pictures/risque1.png';
+import Timer from "../components/Timer";
+import '../pages/Gameone.css'
 
 function Gameone() {
   const [mapAreas, setMapAreas] = useState({
@@ -11,21 +12,21 @@ function Gameone() {
         id: 1,
         shape: "circle",
         coords: [210, 157, 10],
-        preFillColor: "blue",
+        // FillColor: "blue", 
         href: "https://tenor.com/view/beaker-electrocuted-ahhh-gif-9589484"
       },
       {
         id: 2,
         shape: "circle",
         coords: [191, 297, 10],
-        preFillColor: "red",
+        // preFillColor: "transparent",
         href: "https://youtube.com"
       },
       {
         id: 3,
         shape: "circle",
         coords: [187, 248, 10],
-        preFillColor: "green",
+        // preFillColor: "transparent",
         href: "https://youtube.com"
 
       },
@@ -33,7 +34,7 @@ function Gameone() {
         id: 4,
         shape: "circle",
         coords: [210, 193, 10],
-        preFillColor: "yellow",
+        // preFillColor: "transparent",
         href: "https://youtube.com"
 
       },
@@ -41,7 +42,7 @@ function Gameone() {
         id: 5,
         shape: "circle",
         coords: [230, 158, 10],
-        preFillColor: "pink",
+        // preFillColor: "transparent",
         href: "https://youtube.com"
 
       }
@@ -50,7 +51,7 @@ function Gameone() {
         id: 6,
         shape: "circle",
         coords: [320, 360, 15],
-        preFillColor: "black",
+        // preFillColor: "transparent",
         href: "https://tenor.com/view/drunk-night-party-drink-struggling-gif-16095490"
 
       }
@@ -69,9 +70,11 @@ function Gameone() {
         map={mapAreas}
       />
       <pre>On each click, circle should be position of the clicked</pre>
+      <Timer />
     </div>
   );
 }
+
 export default Gameone;
 
 
