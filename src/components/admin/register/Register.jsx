@@ -55,7 +55,7 @@ const Register = () => {
           setUser({
             token: credential,
           });
-          navigator('/login');
+          navigator('/');
         })
         .catch((err) => {
           setError(err.response.data.message);

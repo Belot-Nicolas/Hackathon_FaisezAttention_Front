@@ -53,7 +53,7 @@ const LoginDashboard = (props) => {
             token: credentials,
           });
           //je récupère mon navigator pour dire où le client se retrouve?
-          navigator('/')
+          navigator('/jeux')
         })
         //gestion de l'erreur: message se trouve  dans le back
         .catch(({ response: { data: { message } } }) => {
@@ -71,6 +71,7 @@ const LoginDashboard = (props) => {
       </div>
       <div className='control_text'>
         <h1 className='title_login'>Bienvenue au Jeu des 7 Erreurs</h1>
+
         <p className='error'>{error}</p>
 
         <div className='Login-Dashboard'>
@@ -86,7 +87,7 @@ const LoginDashboard = (props) => {
           <br />
 
             <label className='user-password-container' htmlFor="password">
-              <h2>MOT DE PASSE {formik.errors.password ? <div className="error">{formik.errors.password}</div> : null}</h2>
+              MOT DE PASSE {formik.errors.password ? <div className="error">{formik.errors.password}</div> : null}
             </label>
 
           <br />
@@ -96,7 +97,7 @@ const LoginDashboard = (props) => {
 
             <br />
 
-            <button className='submit-btn' type='submit'>Envoyer</button>
+            <button className='login-btn' type='submit'>Envoyer</button>
 
           </form>
         </div>

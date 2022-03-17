@@ -17,7 +17,7 @@ function App() {
       <UserProvider>
         <Routes>
           <Route path='/' element={<LoginDashboard />} />         
-          <Route path='jeux' element={<Gameone />} />
+          <Route path='/jeux' element={<Gameone />} />
           <Route path='/admin' element={<Register />} />
         </Routes>
       </UserProvider>
