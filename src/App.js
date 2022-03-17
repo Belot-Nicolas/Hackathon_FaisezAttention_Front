@@ -1,11 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
 import LoginDashboard from './components/LoginDashboard';
-import './App.css';
-import Gameone from './pages/Gameone';
-import Gametwo from './pages/Gametwo';
+import Game from './pages/Game'
+import Gameone from '../src/pages/Gameone';
+import Gametwo from '../src/pages/Gametwo';
 import UserProvider from './contexts/UserProvider';
 import './App.css';
-import Game from './pages/Game';
 // import logoBlanc from './assets/logoBlanc.png';
 
 function App() {
