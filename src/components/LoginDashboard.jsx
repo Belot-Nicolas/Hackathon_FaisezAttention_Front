@@ -48,13 +48,15 @@ const LoginDashboard = (props) => {
         //j'appelle mon API et la route users (où est login?)
         .post(`${process.env.REACT_APP_API_URL}/users/login`, values)
         //je récupère (pour envoyer)les attributs propre à mon user: credentials se trouve dans le back
-        .then(({ data: { credentials } }) => {
+        .then(console.log(values))
+        .then(({ data: { credentials, id_user } }) => {
           // quels attributs : qu'est ce que je vais envoyer une fois que l'utilisateur est connecté (j'attache le token)
           setUser({
-            token: credentials,
+            token: credentials, id_user: id_user
           });
+
           //je récupère mon navigator pour dire où le client se retrouve?
-          navigator('/')
+          navigator(`/game/${values.email}`)
         })
         //gestion de l'erreur: message se trouve  dans le back
         .catch(({ response: { data: { message } } }) => {
