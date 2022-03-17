@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from "react";
 import ImageMapper from "react-image-mapper";
-import risque1 from './pictures/risque1.png';
+import risque1 from '../pictures/risque1.png';
 
 
 
