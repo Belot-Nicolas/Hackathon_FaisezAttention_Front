@@ -1,0 +1,9 @@
+.Mirroir{
+    position: absolute;
+    margin-bottom: 300px;
+    z-index: 2;
+    
+}
+.container{
+    position: absolute;
+}
