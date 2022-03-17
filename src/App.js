@@ -3,11 +3,13 @@ import { Route, Routes } from 'react-router-dom';
 import LoginDashboard from './components/LoginDashboard';
 import './App.css';
 import UserProvider from './contexts/UserProvider';
+import logoBlanc from './assets/logoBlanc.png';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello</h1>
+      <h1><img className='Title' src={logoBlanc}/></h1>
+      
        <UserProvider>
           <Routes>
             <Route path ='/' element={<LoginDashboard/>} />
