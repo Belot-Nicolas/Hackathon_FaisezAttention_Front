@@ -1,4 +1,11 @@
-* {
-  margin: 0;
-  padding: 0;
+body {
+    font-family: sans-serif;
+}
+
+.Title {
+    width: 650px;
+    height: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
