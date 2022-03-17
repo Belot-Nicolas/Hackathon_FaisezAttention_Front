@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       
-      <h1><img className='Title' src={logoBlanc}/></h1>
+      {/* <h1><img className='Title' src={logoBlanc}/></h1> */}
       <UserProvider>
         <Routes>
           <Route path='/' element={<LoginDashboard />} />
