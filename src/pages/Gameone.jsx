@@ -1,10 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ImageMapper from "react-image-mapper";
-import risque1 from '../pictures/risque1.png';
+import risque1 from '../assets/risque1.png';
 import Timer from "../components/Timer";
-import '../pages/Gameone.css'
+import Circle from "./Circle";
+import './Gameone.css'
 
 function Gameone() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(!isVisible)
+      console.log("coucou")
+    }
+    ,60000
+    )
+  }
+  ,[]
+  ) 
+
+  const [hoveredArea, setHoveredArea] = useState(null);
   const [mapAreas, setMapAreas] = useState({
     name: "my-map",
     areas: [
@@ -12,21 +27,18 @@ function Gameone() {
         id: 1,
         shape: "circle",
         coords: [210, 157, 10],
-        // FillColor: "blue", 
         href: "https://tenor.com/view/beaker-electrocuted-ahhh-gif-9589484"
       },
       {
         id: 2,
         shape: "circle",
         coords: [191, 297, 10],
-        // preFillColor: "transparent",
         href: "https://youtube.com"
       },
       {
         id: 3,
         shape: "circle",
         coords: [187, 248, 10],
-        // preFillColor: "transparent",
         href: "https://youtube.com"
 
       },
@@ -34,7 +46,6 @@ function Gameone() {
         id: 4,
         shape: "circle",
         coords: [210, 193, 10],
-        // preFillColor: "transparent",
         href: "https://youtube.com"
 
       },
@@ -42,7 +53,6 @@ function Gameone() {
         id: 5,
         shape: "circle",
         coords: [230, 158, 10],
-        // preFillColor: "transparent",
         href: "https://youtube.com"
 
       }
@@ -51,102 +61,72 @@ function Gameone() {
         id: 6,
         shape: "circle",
         coords: [320, 360, 15],
-        // preFillColor: "transparent",
         href: "https://tenor.com/view/drunk-night-party-drink-struggling-gif-16095490"
 
       }
     ]
-  });
+});
+/*useEffect(() => { 
+  axios
+  .get*/ 
+
+  const array = [{
+    id: 1,
+    shape: "circle",
+    coords: [205, 183, 10],
+    href: "https://media.giphy.com/media/3oEjHZFzgi0u3Lwozm/giphy.gif"
+  },
+  {
+    id: 2,
+    shape: "circle",
+    coords: [187, 287, 10],
+    href: "https://media.giphy.com/media/l2Je4zlfxF6z0IWZi/giphy.gif"
+  },
+  {
+    id: 3,
+    shape: "circle",
+    coords: [180, 240, 10],
+    href: "https://media.giphy.com/media/YPBvdXHxANHHi/giphy.gif"
+
+  },
+  {
+    id: 4,
+    shape: "circle",
+    coords: [202, 149, 10],
+    href: "https://media.giphy.com/media/RLVfdugclMsm0DAyO5/giphy.gif"
+
+  },
+  {
+    id: 5,
+    shape: "circle",
+    coords: [225, 150, 10],
+    href: "https://media.giphy.com/media/26tk0uclMbXSlyQik/giphy.gif"
+
+  }
+  ,
+  {
+    id: 6,
+    shape: "circle",
+    coords: [315, 350, 15],
+    href: "https://media.giphy.com/media/RJaUOmpBQAoE4RuWnj/giphy.gif"
+
+  }]
 
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-
-      <ImageMapper
-        src={risque1}
-        //onClick={area => getTipPosition(area)}
-        /*onImageClick={handleUpdateMapArea}*/
-        map={mapAreas}
-      />
-      <pre>On each click, circle should be position of the clicked</pre>
+      <h1 className="error_game">Jeu des 7 erreurs</h1>
+      <div className='container'>
       <Timer />
-    </div>
-  );
-}
-
-export default Gameone;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*function Gameone({ user, mediaId }) {
-  const [tagPosition, setTagPosition] = useState(initialPosition);
-  const imageWrapRef = createRef();
-  const initialPosition = {
-  x: "",
-  y: "",
-};
-  
-  const handleTagClick = (e) => {
-    const { left, top } = imageWrapRef.current.getBoundingClientRect();
-    const x = e.pageX - left;
-    const y = e.pageY - top;
-    setTagPosition((prev) => ({ ...prev, x, y }));
-  };
-  return (
-        <div classname='main_pic'>
-            <img src={risque1} alt='main-pic'/> 
-    <div
-      onClick={(e) => handleTagClick(e)}
-      ref={imageWrapRef}>
-      <div
-        style={{
-          left: `${tagPosition.x}px`,
-          top: `${tagPosition.y}px`,
-          zIndex: 2,
-          padding: 10,
-          position: "absolute",
-       }}
-       className="rounded-full flex text-lg">
-           
-       </div>
-      <Gameone
-        onLoad={handleLoadingComplete}
-        className="bg-gray-300 w-full"
-        alt=""
-        src="URL"
-        layout="responsive"
-        width={700}
-        height={800}
-      />
+      <ImageMapper src={risque1} />
+      </div> 
+      <div className='Mirroir'>
+        {array.map((item) => (
+        <Circle key={item.id}item={item}/>
+      ))}</div>
+      <div className="the_end">
+      {isVisible && <div>Temps écoulé ! </div>}
       </div>
     </div>
   );
 }
-
-export default Gameone;*/
+export default Gameone;

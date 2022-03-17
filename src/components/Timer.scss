@@ -21,16 +21,17 @@ $sec: 60;
 //   font-family: 'Finger Paint', cursive;
 // }
 .wrapper {
+    margin-bottom: 50px;
   position: relative;
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
 }
 .timer {
-    background-color: #fafafa;
+    background-color: #f7fbef;
   width: 150%;
   height: 150%;
-  border: 0.1rem solid #aecbba;
+  border: 0.3rem solid #ffe3a3;
   border-radius: inherit;
   display: flex;
   justify-content: center;
@@ -46,10 +47,19 @@ $sec: 60;
   left: 0;
   width: 150%;
   height: 150%;
-  border: 0.1rem solid #538d6d;
+  border: 0.3rem solid #f5ab00;
   border-radius: inherit;
   animation: round steps($sec + 1) both #{$sec + 1}s ;
 }
+
+@keyframes fuck-anim {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 
 @keyframes countdown {
   @for $i from 0 through $sec {
