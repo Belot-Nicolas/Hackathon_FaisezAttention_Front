@@ -42,9 +42,9 @@ const Register = () => {
       if (!values.avatar) {
         errors.avatar = 'Required';
       }
-      // if (!values.role) {
-      //   errors.role = 'Required';
-      // }
+      if (!values.role) {
+        errors.role = 'Required';
+      }
 
       return errors;
     },
@@ -136,7 +136,7 @@ const Register = () => {
             </label>
 
           
-            {/* <label className='role' htmlFor="role">
+            <label className='role' htmlFor="role">
              Role
               {formik.errors.role ? <div className="error">{formik.errors.role}</div> : null}
               <br />
@@ -147,7 +147,7 @@ const Register = () => {
                 onChange={formik.handleChange}
                 value={formik.values.role}
               />
-            </label> */}
+            </label>
         </div>
         <button className='register-btn' type="submit">Soumettre</button>
       </form>

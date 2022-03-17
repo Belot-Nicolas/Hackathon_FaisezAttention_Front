@@ -5,8 +5,9 @@ import { useFormik } from 'formik';
 import axios from 'axios';
 //j'appelle mon useContext
 import { useUser } from '../../contexts/UserProvider';
-import './LoginDashboard.css'
 import panneauSolaire from '../../assets/panneauSolaire.jpg'
+import logoBlanc from '../../assets/logoBlanc.png';
+import './LoginDashboard.css'
 
 
 
@@ -67,13 +68,14 @@ const LoginDashboard = (props) => {
 
 
   return (
+
     <div className='dash_board'>
+      <img className='Title' src={logoBlanc}/>
       <div >
         <img className='solar_panels' src={panneauSolaire} />
       </div>
       <div className='control_text'>
-        <h1 className='title_login'>Bienvenue au Jeu des 7 Erreurs</h1>
-
+        <h1 className='title_login'>Le Jeu des 7 Erreurs</h1>
         <p className='error'>{error}</p>
 
         <div className='Login-Dashboard'>
@@ -87,7 +89,7 @@ const LoginDashboard = (props) => {
               placeholder="Email" />
 
           <br />
-
+          <div className='motdepasse'>
             <label className='user-password-container' htmlFor="password">
               MOT DE PASSE {formik.errors.password ? <div className="error">{formik.errors.password}</div> : null}
             </label>
@@ -101,6 +103,7 @@ const LoginDashboard = (props) => {
 
             <button className='login-btn' type='submit'>Envoyer</button>
 
+          </div>
           </form>
         </div>
       </div>
