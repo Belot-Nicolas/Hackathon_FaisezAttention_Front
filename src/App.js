@@ -1,8 +1,8 @@
 
 import { Route, Routes } from 'react-router-dom';
-// import LoginDashboard from './components/LoginDashboard';
-// import Register from './components/Register';
-import Gameone from './components/Gameone';
+import LoginDashboard from './components/LoginDashboard';
+import Game from './pages/Game'
+import Gameone from '../src/pages/Gameone'
 import logoBlanc from './assets/logoBlanc.png';
 import './App.css';
 
@@ -16,9 +16,10 @@ function App() {
      
       <UserProvider>
         <Routes>
-          {/* <Route path='/' element={<LoginDashboard />} /> */}
-          <Route path='jeux' element={<Gameone />} />
-          {/* <Route path='/admin' element={<Register />} /> */}
+          <Route path='/' element={<LoginDashboard />} />
+          <Route path='/admin' element={<Register />} />
+          <Route path='/Game' element={<Gameone/>} />
+          <Route path='/game/:email' element={<Game />} />
         </Routes>
       </UserProvider>
     </div>
