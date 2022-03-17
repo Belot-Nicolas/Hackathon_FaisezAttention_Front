@@ -6,6 +6,7 @@ import axios from 'axios';
 //j'appelle mon useContext
 import { useUser } from '../../contexts/UserProvider';
 import './LoginDashboard.css'
+import panneauSolaire from '../../assets/panneauSolaire.jpg'
 
 
 
@@ -64,37 +65,41 @@ const LoginDashboard = (props) => {
 
 
   return (
-    <div className='LoginDashboard'>
-   
-      <h1>LoginDashboard (Public) </h1>
-      <p className='error'>{error}</p>
-      <div className='Login-Dashboard'>
-        <form onSubmit={formik.handleSubmit}>
-          <label className='user-login-container' htmlFor="email">EMAIL UTILISATEUR
-            {formik.errors.email ? <div className="error">{formik.errors.email}</div> : null}</label>
-          <br />
-          {/* to have an action after the change => onChange->event->the state action 'grace' of a value (here the email) */}
-          {/* handleChange pour changer mes données */}
-          <input className="login-container" type="email" name="email" id="email" onChange={formik.handleChange} value={formik.values.email}
-            placeholder="Email" />
+    <div className='dash_board'>
+      <div >
+        <img className='solar_panels' src={panneauSolaire} />
+      </div>
+      <div className='control_text'>
+        <h1 className='title_login'>Bienvenue au Jeu des 7 Erreurs</h1>
+        <p className='error'>{error}</p>
+
+        <div className='Login-Dashboard'>
+          <form onSubmit={formik.handleSubmit}>
+            <label className='user-login-container' htmlFor="email">EMAIL UTILISATEUR
+              {formik.errors.email ? <div className="error">{formik.errors.email}</div> : null}</label>
+            <br />
+            {/* to have an action after the change => onChange->event->the state action 'grace' of a value (here the email) */}
+            {/* handleChange pour changer mes données */}
+            <input className="login-container" type="email" name="email" id="email" onChange={formik.handleChange} value={formik.values.email}
+              placeholder="Email" />
 
           <br />
 
-          <label className='user-password-container' htmlFor="password">
-            <h2>MOT DE PASSE {formik.errors.password ? <div className="error">{formik.errors.password}</div> : null}</h2>
-          </label>
+            <label className='user-password-container' htmlFor="password">
+              <h2>MOT DE PASSE {formik.errors.password ? <div className="error">{formik.errors.password}</div> : null}</h2>
+            </label>
 
           <br />
 
           <input className="password-container" type="password" name="password" id="password" onChange={formik.handleChange} value={formik.values.password}
             placeholder="Votre mot de passe" />
 
-          <br />
+            <br />
 
-          <button className='submit-btn' type='submit'>Envoyer</button>
+            <button className='submit-btn' type='submit'>Envoyer</button>
 
-        </form>
-
+          </form>
+        </div>
       </div>
 
        
