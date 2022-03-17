@@ -84,16 +84,16 @@ const LoginDashboard = (props) => {
             <input className="login-container" type="email" name="email" id="email" onChange={formik.handleChange} value={formik.values.email}
               placeholder="Email" />
 
-            <br />
+          <br />
 
             <label className='user-password-container' htmlFor="password">
               <h2>MOT DE PASSE {formik.errors.password ? <div className="error">{formik.errors.password}</div> : null}</h2>
             </label>
 
-            <br />
+          <br />
 
-            <input className="password-container" type="password" name="password" id="password" onChange={formik.handleChange} value={formik.values.password}
-              placeholder="Votre mot de passe" />
+          <input className="password-container" type="password" name="password" id="password" onChange={formik.handleChange} value={formik.values.password}
+            placeholder="Votre mot de passe" />
 
             <br />
 
