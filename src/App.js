@@ -2,6 +2,7 @@
 import { Route, Routes } from 'react-router-dom';
 import LoginDashboard from './components/LoginDashboard';
 import './App.css';
+import Game from './pages/Game'
 import Gameone from './pages/Gameone';
 import Gametwo from './pages/Gametwo';
 import UserProvider from './contexts/UserProvider';
