@@ -2,7 +2,6 @@
 import { Route, Routes } from 'react-router-dom';
 import LoginDashboard from './components/login/LoginDashboard';
 import Register from './components/admin/register/Register';
-import Gameone from './components/Gameone';
 import Game from './pages/Game'
 import Gameone from '../src/pages/Gameone'
 import logoBlanc from './assets/logoBlanc.png';
