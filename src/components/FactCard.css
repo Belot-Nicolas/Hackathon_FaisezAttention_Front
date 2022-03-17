@@ -1,0 +1,15 @@
+.anecdote{
+    position: absolute;
+    margin-top: 35px;
+    margin-left: -79px;
+    width: 34%;
+    height: 45%;
+    color: red;
+    background-color: rgb(231, 229, 229);
+    border: 1px solid rgb(247, 245, 245);
+    border-radius: 5px;
+    font-size: 20px;
+    z-index: 2
+
+    }
+    
