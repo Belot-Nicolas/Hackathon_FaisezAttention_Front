@@ -4,9 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
 import axios from 'axios';
 //j'appelle mon useContext
-import { useUser } from '../contexts/UserProvider';
+import { useUser } from '../../contexts/UserProvider';
 import './LoginDashboard.css'
-import SignIn from './SignIn';
 
 
 
@@ -65,7 +64,7 @@ const LoginDashboard = (props) => {
 
 
   return (
-    <div>
+    <div className='LoginDashboard'>
    
       <h1>LoginDashboard (Public) </h1>
       <p className='error'>{error}</p>
@@ -98,7 +97,6 @@ const LoginDashboard = (props) => {
         
         </div>
 
-        
         
     </div>
   )
