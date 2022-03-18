@@ -6,7 +6,7 @@ const Circle = ({item}) => {
     console.log(visible)
   return (
       <div>
-    <div className='Circle' style={{marginLeft:`${item.coords[0]}px`, marginTop:`${item.coords[1]}px`, opacity:0}} onClick={() => setVisible(!visible)}>O</div>
+    <div className='Circle' style={{marginLeft:`${item.coords[0]}px`, marginTop:`${item.coords[1]}px`}} onClick={() => setVisible(!visible)}>OFF</div>
     {visible && (<img src={item.href} onMouseLeave={() => setVisible(!visible)} alt={item.id}/>)}
   </div>
   )

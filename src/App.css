@@ -12,9 +12,9 @@ body {
 }
 
 .Title {
-    width: 650px;
-    height: 250px;
+    height: 80px;
+    width: auto;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0;
+    margin-right: 0;
 }

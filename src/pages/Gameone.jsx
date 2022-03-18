@@ -76,33 +76,33 @@ function Gameone() {
   const array = [{
     id: 1,
     shape: "circle",
-    coords: [205, 183, 10],
+    coords: [295, 370, 10],
     href: "https://media.giphy.com/media/3oEjHZFzgi0u3Lwozm/giphy.gif"
   },
   {
     id: 2,
     shape: "circle",
-    coords: [187, 287, 10],
+    coords: [265, 500, 10],
     href: "https://media.giphy.com/media/l2Je4zlfxF6z0IWZi/giphy.gif"
   },
   {
     id: 3,
     shape: "circle",
-    coords: [180, 240, 10],
+    coords: [260, 435, 10],
     href: "https://media.giphy.com/media/YPBvdXHxANHHi/giphy.gif"
 
   },
   {
     id: 4,
     shape: "circle",
-    coords: [202, 149, 10],
+    coords: [290, 320, 10],
     href: "https://media.giphy.com/media/RLVfdugclMsm0DAyO5/giphy.gif"
 
   },
   {
     id: 5,
     shape: "circle",
-    coords: [225, 150, 10],
+    coords: [320, 323, 10],
     href: "https://media.giphy.com/media/26tk0uclMbXSlyQik/giphy.gif"
 
   }
@@ -110,7 +110,7 @@ function Gameone() {
   {
     id: 6,
     shape: "circle",
-    coords: [315, 350, 15],
+    coords: [430, 450, 15],
     href: "https://media.giphy.com/media/RJaUOmpBQAoE4RuWnj/giphy.gif"
 
   }]
@@ -121,19 +121,19 @@ function Gameone() {
       <div className='container'>
         <Timer />
       <div className="game-container">
-        <ImageMapper src={risque1} />
+        <ImageMapper className='pic' src={risque1} />
       </div>
       </div> 
       <div className='Mirroir'>
         {array.map((item) => (
         <Circle key={item.id}item={item}/>
-      ))}</div>
+      ))}
+      </div>
       <div className="the_end">
       {isVisible && 
       <FactCard />}
       
       </div>
     </div>
-  );
-}
+  )}
 export default Gameone;
