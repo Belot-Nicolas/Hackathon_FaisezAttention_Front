@@ -23,14 +23,21 @@ img{
 
 .error_game {
     font-family: 'Public Sans', sans-serif;
-    color: #96cd32;
+    color: #185786;
     font-size: 50px;
+    margin-bottom: 24px;
 }
 
 .the_end {
     font-family: 'Public Sans', sans-serif;
-    color: #ffce5c;
+    color: #2a7e7e;
     font-size: 40px;
     margin-left: 80px;
 
+}
+
+.game-container{
+    margin-top: 100px;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
 }

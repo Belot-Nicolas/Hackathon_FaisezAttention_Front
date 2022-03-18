@@ -115,10 +115,11 @@ function Gameone() {
   return (
     <div className="App">
       <h1 className="error_game">Jeu des 7 erreurs</h1>
-      <Timer />
       <div className='container'>
-      <ImageMapper className='pic' src={risque1} />
-      
+        <Timer />
+      <div className="game-container">
+        <ImageMapper className='pic' src={risque1} />
+      </div>
       </div> 
       
       <div className='Mirroir'>
