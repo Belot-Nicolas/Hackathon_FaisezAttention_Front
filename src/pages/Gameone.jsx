@@ -2,15 +2,18 @@ import React, { useState, useEffect } from "react";
 import ImageMapper from "react-image-mapper";
 import risque1 from '../assets/risque1.png';
 import Timer from "../components/Timer";
+import FactCard from "../components/FactCard";
 import Circle from "./Circle";
 import './Gameone.css'
 
 function Gameone() {
   const [isVisible, setIsVisible] = useState(false);
+  const [anecdoteIsVisible, setAnecdoteIsVisible] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(!isVisible)
+      setAnecdoteIsVisible(!anecdoteIsVisible)
       console.log("coucou")
     }
     ,60000
@@ -114,7 +117,7 @@ function Gameone() {
 
   return (
     <div className="App">
-      <h1 className="error_game">Jeu des 7 erreurs</h1>
+      <h1 className="error_game">Jeu des erreurs</h1>
       <div className='container'>
         <Timer />
       <div className="game-container">
@@ -126,7 +129,9 @@ function Gameone() {
         <Circle key={item.id}item={item}/>
       ))}</div>
       <div className="the_end">
-      {isVisible && <div>Temps écoulé ! </div>}
+      {isVisible && 
+      <FactCard />}
+      
       </div>
     </div>
   );
