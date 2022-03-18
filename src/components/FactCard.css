@@ -4,21 +4,25 @@
     position: absolute;
     font-family: 'Public Sans', sans-serif;
     text-align: center;
-    margin-top: 35px;
+    margin-top: 90px;
     margin-left: -79px;
-    width: 26%;
+    /* width: 26%; */
+    width: 690px;
     height: 46%;
+    height: 480px;
     color: red;
     background-color: white;
     border: 1px solid white;
-    border-radius: 5px;
+    border-radius: 15px;
     font-size: 20px;
     z-index: 2
+    
 
     }
 
     .text-anecdote{
         line-height: 30px;
         margin: 8px;
+        padding:14px
     }
     

@@ -110,7 +110,7 @@ function Gameone() {
   {
     id: 6,
     shape: "circle",
-    coords: [430, 450, 15],
+    coords: [430, 580, 15],
     href: "https://media.giphy.com/media/RJaUOmpBQAoE4RuWnj/giphy.gif"
 
   }]
@@ -118,6 +118,7 @@ function Gameone() {
   return (
     <div className="App">
       <h1 className="error_game">Jeu des erreurs</h1>
+      <h2 >Cliquez sur l'image pour découvrir les erreurs</h2>
       <div className='container'>
         <Timer />
       <div className="game-container">
