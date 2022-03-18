@@ -28,7 +28,7 @@ const Profil = () => {
                 <h2> {userData[0].firstname} </h2>
             </div>
             <div className='info-container'>
-            <h2>Dernière partie </h2>
+            <h2>Dernières parties </h2>
             {userData.map((game) =>{
                 return (<p>{game.name} score : {game.score}</p>)
             })}

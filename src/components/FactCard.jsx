@@ -22,9 +22,10 @@ const FactCard = () => {
         <div className="FactCard">
         <div className='the-end'>Temps écoulé !</div>
                 <span className='anecdote'>
-                  Chutes de hauteur: <br/>
-                  En France, après le risque routier professionnel et les manutentions manuelles, les chutes de hauteur sont la troisième cause de mortalité au travail ainsi que d’incapacité permanente identifiées. La chute de hauteur peut avoir des conséquences plus ou moins graves sur le salarié: <br />
+                  <p className='text-anecdote'>Chutes de hauteur: <br/><br />
+                  En France, après le risque routier professionnel et les manutentions manuelles, les chutes de hauteur sont la troisième cause de mortalité au travail ainsi que d’incapacité permanente identifiées. La chute de hauteur peut avoir des conséquences plus ou moins graves sur le salarié: <br /> <br />
                 Plaies, écrasements, lésions internes, fractures des membres supérieurs et inférieurs, fractures rachis lombaires et rachis cervical causant paraplégies ou quadriplégies, traumatisme crânien et décès.
+                </p>
                   </span>
         </div>
     </div>

@@ -1,15 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300&display=swap');
+
 .anecdote{
     position: absolute;
+    font-family: 'Public Sans', sans-serif;
+    text-align: center;
     margin-top: 35px;
     margin-left: -79px;
-    width: 34%;
-    height: 45%;
+    width: 26%;
+    height: 46%;
     color: red;
-    background-color: rgb(231, 229, 229);
-    border: 1px solid rgb(247, 245, 245);
+    background-color: white;
+    border: 1px solid white;
     border-radius: 5px;
     font-size: 20px;
     z-index: 2
 
+    }
+
+    .text-anecdote{
+        line-height: 30px;
+        margin: 8px;
     }
     

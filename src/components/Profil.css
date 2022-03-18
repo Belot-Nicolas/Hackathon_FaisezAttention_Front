@@ -4,9 +4,9 @@
     align-items: center;
     width: 20%;
     height: 80vh;
+    background-color: #185786;
+    color: #F6F6FE;
 
-    background-color: #F6F6FE;
-    color: #1423DC;
     font-family: 'Public Sans', sans-serif;
     border-radius: 15px;
     -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
@@ -36,8 +36,9 @@ box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
     justify-content: center;
     width: 80%;
     height: 100px;
-    background-color: #1423DC;
-    color: #F6F6FE;
+
+    background-color: #F6F6FE;
+    color: #185786;
     margin-top: 24px;
     border-radius: 15px;
     -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 

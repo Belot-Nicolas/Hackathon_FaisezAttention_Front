@@ -4,11 +4,10 @@ import { useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
 import axios from 'axios';
 //j'appelle mon useContext
-import { useUser } from '../contexts/UserProvider';
+import { useUser } from '../../contexts/UserProvider';
+import panneauSolaire from '../../assets/panneauSolaire.jpg'
+import logoBlanc from '../../assets/logoBlanc.png';
 import './LoginDashboard.css'
-import SignIn from './SignIn';
-import panneauSolaire from '../assets/panneauSolaire.jpg'
-import logoBlanc from '../assets/logoBlanc.png';
 
 
 
@@ -76,7 +75,7 @@ const LoginDashboard = (props) => {
         <img className='solar_panels' src={panneauSolaire} />
       </div>
       <div className='control_text'>
-        <h1 className='title_login'>Le jeu de 7 erreurs</h1>
+        <h1 className='title_login'>Le Jeu des 7 Erreurs</h1>
         <p className='error'>{error}</p>
 
         <div className='Login-Dashboard'>
@@ -92,7 +91,7 @@ const LoginDashboard = (props) => {
           <br />
           <div className='motdepasse'>
             <label className='user-password-container' htmlFor="password">
-              <h2>MOT DE PASSE {formik.errors.password ? <div className="error">{formik.errors.password}</div> : null}</h2>
+              MOT DE PASSE {formik.errors.password ? <div className="error">{formik.errors.password}</div> : null}
             </label>
 
           <br />
@@ -103,13 +102,13 @@ const LoginDashboard = (props) => {
             <br />
 
             <button className='login-btn' type='submit'>Envoyer</button>
+
           </div>
           </form>
         </div>
       </div>
 
-
-
+       
     </div>
   )
 }
