@@ -80,7 +80,7 @@ const LoginDashboard = (props) => {
 
         <div className='Login-Dashboard'>
           <form onSubmit={formik.handleSubmit}>
-            <label className='user-login-container' htmlFor="email">EMAIL UTILISATEUR
+            <label className='motdepasse' htmlFor="email">EMAIL UTILISATEUR
               {formik.errors.email ? <div className="error">{formik.errors.email}</div> : null}</label>
             <br />
             {/* to have an action after the change => onChange->event->the state action 'grace' of a value (here the email) */}
@@ -95,10 +95,12 @@ const LoginDashboard = (props) => {
             </label>
 
           <br />
+          
 
           <input className="password-container" type="password" name="password" id="password" onChange={formik.handleChange} value={formik.values.password}
             placeholder="Votre mot de passe" />
 
+            <br />
             <br />
 
             <button className='login-btn' type='submit'>Envoyer</button>
