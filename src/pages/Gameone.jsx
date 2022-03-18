@@ -76,33 +76,33 @@ function Gameone() {
   const array = [{
     id: 1,
     shape: "circle",
-    coords: [295, 225, 10],
+    coords: [295, 370, 10],
     href: "https://media.giphy.com/media/3oEjHZFzgi0u3Lwozm/giphy.gif"
   },
   {
     id: 2,
     shape: "circle",
-    coords: [265, 370, 10],
+    coords: [265, 500, 10],
     href: "https://media.giphy.com/media/l2Je4zlfxF6z0IWZi/giphy.gif"
   },
   {
     id: 3,
     shape: "circle",
-    coords: [260, 300, 10],
+    coords: [260, 435, 10],
     href: "https://media.giphy.com/media/YPBvdXHxANHHi/giphy.gif"
 
   },
   {
     id: 4,
     shape: "circle",
-    coords: [290, 190, 10],
+    coords: [290, 320, 10],
     href: "https://media.giphy.com/media/RLVfdugclMsm0DAyO5/giphy.gif"
 
   },
   {
     id: 5,
     shape: "circle",
-    coords: [320, 190, 10],
+    coords: [320, 323, 10],
     href: "https://media.giphy.com/media/26tk0uclMbXSlyQik/giphy.gif"
 
   }
@@ -124,12 +124,10 @@ function Gameone() {
         <ImageMapper className='pic' src={risque1} />
       </div>
       </div> 
-      
       <div className='Mirroir'>
         {array.map((item) => (
         <Circle key={item.id}item={item}/>
       ))}
-      
       </div>
       <div className="the_end">
       {isVisible && 
